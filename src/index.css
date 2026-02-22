@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&family=Ma+Shan+Zheng&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Ma Shan Zheng", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-900 text-stone-100 overflow-hidden;
+    background-image: radial-gradient(circle at 50% 50%, rgba(28, 25, 23, 0.7) 0%, rgba(12, 10, 9, 0.9) 100%),
+                      url('https://picsum.photos/seed/china_landscape/1920/1080?blur=5');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.glass {
+  @apply bg-stone-100/10 backdrop-blur-xl border border-stone-100/20 shadow-2xl;
+}
+
+.landscape-badge {
+  background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.block-pop {
+  animation: pop 0.2s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
